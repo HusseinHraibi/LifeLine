@@ -1,0 +1,80 @@
+.about-page {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 56px 24px;
+  color: #292329;
+  text-align: left;
+}
+
+.about-heading {
+  padding-bottom: 36px;
+  border-bottom: 3px solid #a6192e;
+}
+
+.about-label {
+  color: #a6192e;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.about-heading h1 {
+  margin: 20px 0;
+  font-size: 48px;
+  line-height: 1.15;
+}
+
+.about-heading > p:last-child {
+  max-width: 600px;
+  font-size: 22px;
+  line-height: 1.6;
+  color: #65585e;
+}
+
+.about-story {
+  display: flex;
+  gap: 40px;
+  padding: 32px 0;
+  border-bottom: 1px solid #d9d2cb;
+}
+
+.about-story h2 {
+  flex: 1;
+  margin: 0;
+  font-size: 26px;
+}
+
+.about-story > div {
+  flex: 2;
+  min-width: 0;
+}
+
+.about-story p {
+  margin: 0 0 16px;
+  font-size: 19px;
+  line-height: 1.7;
+}
+
+.about-link {
+  display: inline-block;
+  padding: 8px 0;
+  color: #a6192e;
+  font-size: 19px;
+  font-weight: 600;
+  text-underline-offset: 4px;
+}
+
+@media (max-width: 600px) {
+  .about-page {
+    padding: 32px 20px;
+  }
+
+  .about-heading h1 {
+    font-size: 36px;
+  }
+
+  .about-story {
+    flex-direction: column;
+    gap: 16px;
+  }
+}
