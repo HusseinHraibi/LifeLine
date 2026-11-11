@@ -1,0 +1,19 @@
+.navbar {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 20px;
+    background-color: #a6192e;
+  }
+  
+  .navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 8px;
+  }
+  
+  .navbar a:hover,
+  .navbar a:focus-visible {
+    text-decoration: underline;
+  }
