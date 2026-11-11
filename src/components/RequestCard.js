@@ -2,7 +2,7 @@ import '../styles/RequestCard.css';
 import { useState } from 'react';
 import DonationForm from './DonationForm';
 
-function RequestCard({ bloodType, hospital, area, units }) {
+function RequestCard({ bloodType, hospital, area, units, isOwnRequest }) {
   const [showForm, setShowForm] = useState(false);
 
   function toggleForm() {
@@ -23,9 +23,10 @@ function RequestCard({ bloodType, hospital, area, units }) {
         <strong>{units}</strong>
         <span>{units === 1 ? 'unit needed' : 'units needed'}</span>
       </p>
-      <button className="donate-button" type="button" onClick={toggleForm} aria-expanded={showForm}>
+      {isOwnRequest && <span className="own-request">Your request</span>}
+      {!isOwnRequest && <button className="donate-button" type="button" onClick={toggleForm} aria-expanded={showForm}>
         {showForm ? 'Close checker' : 'I want to donate'}
-      </button>
+      </button>}
       {showForm && <DonationForm bloodType={bloodType} />}
     </article>
   );

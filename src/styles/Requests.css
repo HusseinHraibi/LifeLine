@@ -21,6 +21,31 @@
   font-size: 24px;
 }
 
+.request-filter {
+  margin-top: 24px;
+}
+
+.request-filter label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.request-filter select {
+  box-sizing: border-box;
+  max-width: 100%;
+  padding: 10px 16px;
+  border: 1px solid #b7a9a5;
+  border-radius: 6px;
+  background-color: white;
+  font: inherit;
+}
+
+.own-request {
+  color: #a6192e;
+  font-weight: 600;
+}
+
 .requests-page {
   max-width: 980px;
   margin: 0 auto;
