@@ -16,7 +16,6 @@ function Home() {
           <Link className="home-primary-link" to="/requests">View Blood Requests</Link>
           <Link className="home-secondary-link" to="/about">About Lifeline</Link>
         </div>
-        <p className="home-demo-note">Student demonstration: all requests are sample data.</p>
       </section>
 
       <section className="home-how" aria-labelledby="how-heading">
@@ -26,7 +25,7 @@ function Home() {
           <article className="home-step">
             <span className="home-step-number">01</span>
             <h3>Browse requests</h3>
-            <p>Explore sample blood requests and see the blood type and location for each one.</p>
+            <p>Explore blood requests and see the blood type and location for each one.</p>
           </article>
           <article className="home-step">
             <span className="home-step-number">02</span>
@@ -35,8 +34,8 @@ function Home() {
           </article>
           <article className="home-step">
             <span className="home-step-number">03</span>
-            <h3>Add a sample request</h3>
-            <p>Try the request form and add an example to the list during your visit.</p>
+            <h3>Add a request</h3>
+            <p>Use the request form to add a blood request to the list during your visit.</p>
           </article>
         </div>
       </section>

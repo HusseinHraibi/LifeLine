@@ -1,4 +1,20 @@
-# Getting Started with Create React App
+# Lifeline
+
+Lifeline is a CSCI426 Phase 1 React frontend for browsing blood requests in Lebanon.
+The planned requests feature uses fictional local data. Forms do not contact hospitals,
+notify donors, or send messages to a server. This frontend is not an operational blood request service.
+
+Hospital names refer to real institutions; their appearance does not indicate a partnership
+or an actual blood request. Blood types and unit quantities in the records are fictional.
+Hospital references: https://www.aub.edu.lb/ , https://www.hdf.usj.edu.lb/en/contact-us ,
+https://www.stgeorgehospital.org/
+
+## Font credit
+
+Source Sans 3 by Adobe: https://github.com/adobe-fonts/source-sans
+Distributed under the SIL Open Font License 1.1.
+
+## Starter setup instructions
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

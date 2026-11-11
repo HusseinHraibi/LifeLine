@@ -2,7 +2,7 @@ function About() {
     return (
       <main>
         <h1>About Lifeline</h1>
-        <p>Lifeline is a student project supporting blood donation in Lebanon.</p>
+        <p>Lifeline brings blood requests together to support communities across Lebanon.</p>
       </main>
     );
   }
