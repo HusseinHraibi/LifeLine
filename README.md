@@ -2,127 +2,100 @@
 
 Your Blood Donation and Health Companion in Lebanon.
 
-Lifeline is a React frontend for browsing blood requests, filtering by blood type, adding a request, and checking potential red blood cell compatibility.
+My CSCI426 Phase 1 project at LIU Beirut. The idea is to put blood requests in one place so people can check the blood type, hospital, location, and units needed.
 
-Developed by Hussein Hraibi for CSCI426 Advanced Web Programming, Phase 1, at LIU Beirut.
+- **Name:** Hussein Hraibi
+- **Course:** Advanced Web Programming
+- **Working:** Solo
 
-## Pages
+## Pages and features
 
-| Page | Route | Purpose |
-| --- | --- | --- |
-| Home | `/` | Introduction and links to the main features |
-| About | `/about` | Lifeline's purpose |
-| Features | `/features` | Overview of the available features |
-| Contact | `/contact` | Contact form with validation |
-| Blood Requests | `/requests` | Requests, filtering, add-request form, and compatibility checker |
+- **Home:** introduces Lifeline and links to the requests.
+- **About:** explains the idea behind the website.
+- **Features:** shows what visitors can do.
+- **Contact:** a form for name, email, and message, with input validation.
+- **Blood Requests:** browse requests, filter by blood type, and add a request. Each existing request has a blood-type compatibility checker.
 
-## Features
+The navbar and footer are shared across the pages. CSS media queries adjust the layout for smaller screens.
 
-- Shared navbar and footer on all five pages.
-- Responsive layouts using plain CSS and media queries.
-- Request cards showing blood type, hospital, location, and units needed.
-- Exact blood-type filtering, request count, and an empty-results message.
-- A form that checks required fields and positive whole-number units.
-- New requests appear first and display "Your request" instead of a donation button.
-- An inline checker for potential ABO/Rh red blood cell compatibility.
-- Contact form validation with on-screen feedback.
-- Locally stored Source Sans 3 fonts.
+## Tools used
 
-## Technologies
+React, JavaScript, React Router, HTML, CSS, Create React App, and Git.
 
-React, JavaScript (JSX), React Router DOM 6, HTML, plain CSS, Create React App, and Git.
+The main React concepts are components, props, `useState`, forms, `.map()`, and `.filter()`.
 
-The code uses functional components, props, `useState`, named event handlers, object-based form state, `.map()`, and `.filter()`.
+## How to run
 
-## Setup
+Install Node.js and npm. Open the terminal in the project folder, where `package.json` is located.
 
-Install Node.js and npm first. Development was checked with Node.js 24.22.0 and npm 11.19.1 on Windows.
-
-Open a terminal in the folder containing this README and `package.json`. In the current workspace, that folder is `CSCI426-Project1/lifeline`.
-
-Install dependencies from the lockfile:
+Install the packages:
 
 ```sh
 npm ci
 ```
 
-Start the development server:
+Start the website:
 
 ```sh
 npm start
 ```
 
-Open [http://localhost:3000](http://localhost:3000), or the address printed in the terminal if another port is selected. Stop the server with Ctrl+C.
+Open [localhost:3000](http://localhost:3000) in the browser. Press Ctrl+C in the terminal to stop it.
 
-On Windows PowerShell, use `npm.cmd` instead of `npm` if script execution is blocked.
-
-Create a production build:
+To make a production build:
 
 ```sh
 npm run build
 ```
 
-The generated website files are written to `build/`. No environment variables or backend setup are required.
+The result is saved in the `build` folder. On Windows PowerShell, `npm.cmd` can be used instead of `npm` if scripts are blocked.
 
-## Project structure
+## Folders
 
-```text
-public/                 HTML entry file, browser title, and favicon
-src/
-  assets/fonts/         Local fonts and their license
-  components/           Navbar, footer, request cards, and forms
-  data/                 Local requests and compatibility lookup
-  pages/                Home, About, Features, Contact, Requests
-  styles/               Component and page styles
-  App.js                Routes and shared layout
-  index.js              React entry point
-  index.css             Fonts and global styles
-```
+- `src/components`: navbar, footer, cards, and request forms.
+- `src/pages`: the five pages.
+- `src/data`: blood requests and blood-type compatibility data.
+- `src/styles`: CSS files.
+- `src/assets/fonts`: font files and license.
+- `docs/screenshots`: screenshots of the website.
 
-## Frontend scope
+`App.js` contains the routes. `index.js` starts the React app.
 
-Hospital names refer to real institutions, but the listed requests and unit quantities are fictional. Their inclusion does not indicate a partnership or an actual hospital request. The initial records are in Beirut; the request form accepts other locations in Lebanon.
+## Phase 1 notes
 
-Added requests exist only in the Requests page's React state. Leaving that page or reloading resets them. The "Your request" label applies to entries created during that visit; there are no accounts or identity checks.
+This version is frontend only. The hospital names are real, but the requests and quantities are made-up data, not actual requests from those hospitals.
 
-The compatibility checker provides general red blood cell ABO/Rh information. It does not assess donation eligibility, book donations, or replace hospital screening and cross-matching. Plasma and platelet rules are different.
+Added requests stay on the Requests page until it is closed or reloaded. Going to another page also resets them. New entries are marked "Your request" and do not show a donation button. There is no login or database.
 
-The contact form validates input but does not send email or store messages. There is no backend, database, authentication, or external data API.
+The checker compares blood types for possible red blood cell compatibility. It does not confirm if someone is eligible to donate. The hospital still needs to do screening and cross-matching. It does not cover plasma or platelets.
+
+The Contact form checks the inputs but does not send email.
 
 ## Screenshots
 
 ### Home
 
-![Lifeline Home page](docs/screenshots/home.png)
+![Home page](docs/screenshots/home.png)
 
-### Add a blood request
+### Request form
 
-![Form for adding a blood request](docs/screenshots/request-form.png)
+![Add a blood request](docs/screenshots/request-form.png)
 
 ### Blood requests
 
-![Blood request list with filter and donation buttons](docs/screenshots/requests.png)
+![Requests and blood-type filter](docs/screenshots/requests.png)
 
 ### Contact
 
-![Contact form](docs/screenshots/contact.png)
+![Contact page](docs/screenshots/contact.png)
 
-## Deployment
+## Live website
 
-Not deployed yet. Add the verified live URL here after publishing.
+Deployment is not finished yet.
 
-The build command is `npm run build` and the output directory is `build`. If the repository contains the parent workspace folder, set the hosting root directory to `lifeline`.
+## References
 
-React Router uses browser paths. Configure the host to serve `index.html` for routes such as `/requests` and `/contact`, then verify that refreshing those addresses works.
-
-## Credits
-
-- [Source Sans 3 by Adobe](https://github.com/adobe-fonts/source-sans), under the SIL Open Font License 1.1. License included in `src/assets/fonts/LICENSE.md`.
-- [American Society of Hematology: Blood Safety and Matching](https://www.hematology.org/Resources/Patients/Blood-Basics/Blood-Banking-and-Donation/Blood-Safety-and-Matching), used for the red blood cell compatibility lookup.
-- Hospital references: [American University of Beirut](https://www.aub.edu.lb/), [Hotel-Dieu de France](https://www.hdf.usj.edu.lb/en/contact-us), and [Saint George Hospital](https://www.stgeorgehospital.org/).
-- Initialized with Create React App, following the React approaches summarized in the CSCI426 classroom material. No pre-built website template was used.
-- The letter favicon is an SVG created for Lifeline.
-
-## Solo contribution
-
-Hussein Hraibi is the sole student contributor. The final contribution statement and report should describe the completed work and acknowledge assistance according to course rules.
+- Font: [Source Sans 3 by Adobe](https://github.com/adobe-fonts/source-sans). The SIL Open Font License is included with the font files.
+- Compatibility information: [American Society of Hematology](https://www.hematology.org/Resources/Patients/Blood-Basics/Blood-Banking-and-Donation/Blood-Safety-and-Matching).
+- Hospital names: [AUB](https://www.aub.edu.lb/), [Hotel-Dieu de France](https://www.hdf.usj.edu.lb/en/contact-us), and [Saint George Hospital](https://www.stgeorgehospital.org/).
+- Project setup: Create React App. The React structure follows the classroom examples.
