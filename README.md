@@ -91,7 +91,9 @@ The Contact form checks the inputs but does not send email.
 
 ## Live website
 
-Deployment is not finished yet.
+[Open Lifeline](https://lifeline-csci426.netlify.app/)
+
+Hosted on Netlify and connected to this GitHub repository.
 
 ## References
 
